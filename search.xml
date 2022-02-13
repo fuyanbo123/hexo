@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search> 
+  
+  
+    
+    <entry>
+      <title>如何安装hexo</title>
+      <link href="/2022/02/12/%E5%A6%82%E4%BD%95%E5%AE%89%E8%A3%85hexo/"/>
+      <url>/2022/02/12/%E5%A6%82%E4%BD%95%E5%AE%89%E8%A3%85hexo/</url>
+      
+        <content type="html"><![CDATA[<h1 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h1><p>首先安装nodejs<br>在终端中输入如下代码：</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">brew install node</span><br></pre></td></tr></table></figure><p>验证：</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">node -v #node.js</span><br><span class="line">npm -v #npm</span><br></pre></td></tr></table></figure><p>下载hexo</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-cli</span><br></pre></td></tr></table></figure><p>创建一个文件夹<br>右键-&gt;服务-&gt;新建位于文件夹位置的终端窗口</p><p>输入如下代码：</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo init</span><br></pre></td></tr></table></figure><p>过程可能有点慢</p><p>完成以后，进入文件夹<br>右键blog文件夹，右键-&gt;服务-&gt;新建位于文件夹位置的终端窗口<br>输入如下代码：</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hexo g</span><br><span class="line">hexo s</span><br></pre></td></tr></table></figure><p>打开localhost:4000这个网站</p><p>就可以看见博客界面了</p><h1 id="上云"><a href="#上云" class="headerlink" title="上云"></a>上云</h1><p>打开github.com这个网址</p><p>注册一个账号</p><p>点击New repository</p><p>第一行仓库名称</p><p>格式如下：</p><p>你的GitHub名字.github.io</p><p>点击create repository</p><p>打开位于blog的终端</p><p>输入如下代码：</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh-keygen -t rsa -C &quot;你注册GitHub的邮箱&quot;</span><br></pre></td></tr></table></figure><p>一直回车直到出现一个图案<br>然后打开那上面的文件</p><p>复制文件里的所有内容 </p><p>打开github</p><p>点击头像，进入settings-&gt;SSH and GPG keys-&gt;new SSH keys</p><p>填好标题，粘贴你刚才复制的内容</p><p>点击ADD SSH key</p><p>打开终端</p><p>输入如下代码：</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vim _config.yml</span><br></pre></td></tr></table></figure><p>到最下面<br>找到这样的代码</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">deploy:</span><br><span class="line">  type:</span><br></pre></td></tr></table></figure><p>将代码改成这样：</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">deploy:</span><br><span class="line">  type: git</span><br><span class="line">  repo: git@github.com:你的名字/你的名字.github.io.git</span><br><span class="line">  branch: master</span><br></pre></td></tr></table></figure><p>退出<br>输入如下代码：</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hexo g</span><br><span class="line">hexo d</span><br></pre></td></tr></table></figure><p>打开你的名字.github.io就可以看见你的博客了</p><h1 id="如果你觉得这篇教程有用的话可以转发到QQ-微信-博客上噢！"><a href="#如果你觉得这篇教程有用的话可以转发到QQ-微信-博客上噢！" class="headerlink" title="如果你觉得这篇教程有用的话可以转发到QQ/微信/博客上噢！"></a>如果你觉得这篇教程有用的话可以转发到QQ/微信/博客上噢！</h1><p>本文章采用Apache开源许可证，如需转载，请通知作者 <a href="mailto:&#102;&#x75;&#x79;&#97;&#x6e;&#x62;&#x6f;&#49;&#x32;&#x33;&#x40;&#x68;&#111;&#116;&#x6d;&#97;&#x69;&#108;&#x2e;&#x63;&#x6f;&#109;">&#102;&#x75;&#x79;&#97;&#x6e;&#x62;&#x6f;&#49;&#x32;&#x33;&#x40;&#x68;&#111;&#116;&#x6d;&#97;&#x69;&#108;&#x2e;&#x63;&#x6f;&#109;</a>!</p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> 技术类 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+  
+  
+</search>
